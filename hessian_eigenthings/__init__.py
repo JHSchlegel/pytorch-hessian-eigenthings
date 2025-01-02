@@ -1,7 +1,7 @@
 """ Top-level module for hessian eigenvec computation """
-from hessian_eigenthings.power_iter import power_iteration, deflated_power_iteration
-from hessian_eigenthings.lanczos import lanczos
-from hessian_eigenthings.hvp_operator import HVPOperator
+from .power_iter import power_iteration, deflated_power_iteration
+from .lanczos import lanczos
+from .hvp_operator import HVPOperator
 
 name = "hessian_eigenthings"
 
