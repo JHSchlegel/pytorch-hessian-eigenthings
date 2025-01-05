@@ -82,6 +82,12 @@ class HVPOperator(Operator):
                 )
         else:
             self.batch_inputs, self.batch_targets = data_source
+            self.batch_inputs = (
+                self.batch_inputs.cuda() if use_gpu else self.batch_inputs
+            )
+            self.batch_targets = (
+                self.batch_targets.cuda() if use_gpu else self.batch_targets
+            )
             # check whether input and target have the same number of samples:
             assert self.batch_inputs.size(0) == self.batch_targets.size(
                 0
